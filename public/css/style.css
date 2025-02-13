@@ -1005,7 +1005,6 @@ footer {
 .movie-card {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .music-wrapper,
