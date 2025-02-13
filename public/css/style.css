@@ -1283,8 +1283,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-<<<<<<< Updated upstream
-=======
   .nav-container {
     width: 50%;
   }
@@ -1293,7 +1291,6 @@ footer {
     width: 50%;
   }
 
->>>>>>> Stashed changes
   .hero-wrapper h1 {
     font-size: 5rem;
   }
