@@ -102,6 +102,10 @@ body {
     z-index: 999;
   }
 
+  .nav-container {
+    width: 98%;
+  }
+
   .nav-list {
     display: flex;
     align-items: center;
@@ -1287,10 +1291,6 @@ footer {
     width: 50%;
   }
 
-  .nav-menu {
-    width: 50%;
-  }
-
   .hero-wrapper h1 {
     font-size: 5rem;
   }
@@ -1455,5 +1455,9 @@ footer {
 
   .read_me_container .read_me_desc p {
     width: 350px;
+  }
+
+  .footer-newsletter {
+    display: none;
   }
 }
