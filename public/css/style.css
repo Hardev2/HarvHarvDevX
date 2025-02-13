@@ -307,12 +307,20 @@ main {
 }
 
 .slider-wrapper {
-  padding: 30px 150px;
+  padding: 30px 10vw; /* Adjust padding for responsiveness */
+  width: max-content; /* Allow scrolling */
   height: 100%;
   width: 370%;
   display: flex;
   align-items: center;
   gap: 50px;
+}
+
+.slide {
+  flex: 0 0 auto; /* Prevent shrinking */
+  width: 80vw; /* Make slides flexible */
+  max-width: 1000px;
+  position: relative;
 }
 
 .slider-wrapper a {
@@ -555,6 +563,7 @@ footer {
 
 .footer-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-col .footer-header {
@@ -796,6 +805,7 @@ footer {
   margin-bottom: 20px;
   line-height: 27px;
   color: grey;
+  font-size: 1rem;
 }
 
 .about-social-links {
@@ -854,6 +864,21 @@ footer {
   margin-bottom: 50px;
 }
 
+.exp-timeline-card .exp_list {
+  position: relative;
+  left: 20px;
+}
+
+.exp-timeline-card .exp_list li {
+  margin-bottom: 10px;
+  color: grey;
+}
+
+.exp_sub_list {
+  position: relative;
+  left: 20px;
+  top: 5px;
+}
 .exp-timeline-card h3,
 .exp-timeline-card p {
   margin-bottom: 10px;
@@ -980,6 +1005,7 @@ footer {
 .movie-card {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .music-wrapper,
@@ -1192,5 +1218,235 @@ footer {
   }
   50% {
     transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper h1 {
+    font-size: 7rem;
+  }
+
+  .hero-wrapper .fName {
+    text-align: center;
+    font-size: 6rem;
+  }
+
+  .hero-wrapper .rose-img {
+    top: 10%;
+  }
+  .hero-wrapper .rose-img img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .slide-starter h1 {
+    font-size: 1rem;
+  }
+
+  .slide-starter h1 span {
+    font-size: 2rem;
+  }
+
+  .slide-starter {
+    justify-content: center;
+  }
+
+  .slide-starter img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .slide img {
+    width: 500px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .slide .view-slide-content {
+    bottom: 120px;
+  }
+
+  .slide {
+    width: 90vw;
+  }
+
+  .slide-starter h1 {
+    font-size: 3rem;
+  }
+
+  .slide .view-slide-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .slide .view-slide-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-wrapper h1 {
+    font-size: 5rem;
+  }
+
+  .slide-starter h1 span {
+    font-size: 2rem;
+  }
+  .hero-wrapper .rose-img img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-wrapper .rose-img {
+    top: 10%;
+  }
+
+  .slide-starter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+  }
+  .slide-starter h1 {
+    font-size: 2rem;
+  }
+
+  .slide-starter img {
+    width: 100px;
+    height: 50px;
+  }
+  .slide {
+    width: 100vw;
+  }
+
+  .slide-starter h1 {
+    font-size: 2.5rem;
+  }
+
+  .slide-starter img {
+    width: 150px;
+  }
+
+  .slide .view-slide-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .slide .view-slide-content p {
+    font-size: 0.8rem;
+  }
+
+  .about-wrapper h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  .contact-wrapper .contact-col h1 {
+    font-size: 2rem;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer-container {
+    display: flex;
+  }
+
+  .about-section h1 {
+    left: 0;
+  }
+
+  .about-description p {
+    text-align: justify;
+    font-size: 1rem;
+    width: 400px;
+  }
+
+  .about-section-wrapper {
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+  }
+  .about-experience-container {
+    padding: 20px;
+
+    /* margin-top: 300px; */
+    margin-bottom: 0;
+    margin-top: 200px;
+  }
+
+  .exp-timeline-card .exp_list {
+    position: relative;
+    left: 20px;
+    width: 380px;
+  }
+
+  .exp-timeline-card h3,
+  .exp-timeline-card p {
+    width: 400px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .short-reminder {
+    padding: 0 30px;
+  }
+  .short-reminder h1 {
+    font-size: 1rem;
+    text-align: left;
+    width: 350px;
+  }
+
+  .slider .list img {
+    width: 100%;
+  }
+
+  .slider {
+    margin: 0;
+  }
+
+  .taste-container {
+    height: auto;
+    padding: 30px 20px;
+    margin: 0;
+  }
+
+  .music-wrapper,
+  .movie-wrapper {
+    width: 100%;
+  }
+
+  .music-card,
+  .movie-card {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .music-box {
+    width: 100%;
+    height: 380px;
+  }
+
+  .music-img img {
+    width: 100%;
+    height: 300px;
+    border-radius: 50%;
+  }
+
+  .movie-box img {
+    width: 100%;
+  }
+
+  .read_me_container .read_me_desc p {
+    width: 350px;
   }
 }

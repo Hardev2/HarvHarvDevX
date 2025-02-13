@@ -2,21 +2,68 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-const totalSlides = document.querySelectorAll('.slide').length;
-const totalWidth = totalSlides * 33.33;
-const scrollLength = totalWidth - 100;
+gsap.registerPlugin(ScrollTrigger);
 
-gsap.to('.slider-wrapper', {
-  x: `-${scrollLength}%`,
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.project-slider',
-    start: 'top 30%',
-    end: '+=2000',
-    pin: true,
-    scrub: 0.8,
-    anticipatePin: 1,
-  },
+let mm = gsap.matchMedia();
+
+mm.add('(min-width: 1024px)', () => {
+  // Desktop screens
+  const totalSlides = document.querySelectorAll('.slide').length;
+  const totalWidth = totalSlides * 33.33;
+  const scrollLength = totalWidth - 100;
+
+  gsap.to('.slider-wrapper', {
+    x: `-${scrollLength}%`,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.project-slider',
+      start: 'top 30%',
+      end: '+=2000',
+      pin: true,
+      scrub: 0.8,
+      anticipatePin: 1,
+    },
+  });
+});
+
+mm.add('(max-width: 1023px)', () => {
+  // Tablets
+  const totalSlides = document.querySelectorAll('.slide').length;
+  const totalWidth = totalSlides * 50; // Adjust for smaller screens
+  const scrollLength = totalWidth - 100;
+
+  gsap.to('.slider-wrapper', {
+    x: `-${scrollLength}%`,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.project-slider',
+      start: 'top 40%',
+      end: '+=1500',
+      pin: true,
+      scrub: 0.8,
+      anticipatePin: 1,
+    },
+  });
+});
+
+mm.add('(max-width: 600px)', () => {
+  // Mobile screens
+  const totalSlides = document.querySelectorAll('.slide').length;
+  const totalWidth = totalSlides * 100; // Show fewer slides
+  const scrollLength = totalWidth - 100;
+
+  gsap.to('.slider-wrapper', {
+    x: `-${scrollLength}%`,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.project-slider',
+      start: 'top 50%',
+      end: '+=1000',
+      pin: true,
+      scrub: 0.8,
+      anticipatePin: 1,
+    },
+  });
 });
 
 gsap.to('.lName', {
@@ -60,6 +107,21 @@ gsap.from('.about-wrapper #about', {
     start: 'top 100%',
     end: 'bottom 80%',
   },
+});
+
+mm.add('(max-width: 480px)', () => {
+  // Large screens (Desktops)
+  gsap.to('.about-wrapper #about', {
+    x: -380, // Move more for larger screens
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.project-slider',
+      start: 'top center',
+      end: '+=2000',
+      scrub: 1,
+      pin: true,
+    },
+  });
 });
 
 gsap.to('#about', {
