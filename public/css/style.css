@@ -1040,6 +1040,136 @@ footer {
   border: 1px solid var(--10-percent-color);
 }
 
+.project-container {
+  margin: 0 10%;
+}
+
+.project-container h1 {
+  margin-bottom: 30px;
+}
+
+.project_wrapper a {
+  text-decoration: none;
+  color: white;
+}
+
+.project_wrapper .project_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-bottom: 1px solid rgb(34, 33, 33);
+  transition: 0.3s;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.project_wrapper .project_card:hover {
+  background-color: rgb(34, 33, 33);
+}
+.project_wrapper .project_card:hover .open_col p {
+  border-bottom: 1px solid white;
+}
+.project_card .project_col {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.project_card .project_col i,
+.project_card .project_col p {
+  color: rgb(206, 201, 201);
+}
+.read_me_container {
+  margin-top: 100px;
+  border: 1px solid rgb(34, 33, 33);
+  border-radius: 10px;
+}
+
+.read_me_container .read_me_header {
+  padding: 10px;
+  background-color: rgb(34, 33, 33);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.read_me_container .read_me_header h3 {
+  color: rgb(206, 201, 201);
+}
+
+.read_me_container .read_me_desc {
+  padding: 50px 10px;
+}
+.read_me_container .read_me_desc p {
+  width: 600px;
+  color: rgb(126, 124, 124);
+  font-size: 1.1rem;
+}
+
+.first_project_container {
+  padding: 0 10%;
+  background-color: var(--60-percent-color);
+  height: auto;
+  position: relative;
+}
+
+.first_project_container h1 {
+  font-size: 1.3rem;
+  color: rgb(143, 140, 140);
+}
+
+.first_project_container h1 span {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.project_one_wrapper {
+  margin-top: 80px;
+  height: auto;
+}
+
+.project_one_wrapper h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.project_one_wrapper p {
+  color: rgb(143, 140, 140);
+  width: 630px;
+  line-height: 27px;
+  margin-bottom: 50px;
+}
+
+.project_one_wrapper img {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.project_one_wrapper .proj_desc {
+  margin-top: 50px;
+  width: 100%;
+  text-align: justify;
+}
+
+.project_case_study .case_study_col {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.project_case_study .case_study_col h3 {
+  width: 200px;
+}
+
+.section-proj {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--60-percent-color);
+  z-index: 99;
+  margin-bottom: 300px;
+}
 @media screen and (max-width: 768px) {
   .slider {
     height: 400px;
