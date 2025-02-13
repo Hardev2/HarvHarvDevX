@@ -1291,6 +1291,10 @@ footer {
     width: 50%;
   }
 
+  .nav-menu {
+    width: 50%;
+  }
+
   .hero-wrapper h1 {
     font-size: 5rem;
   }
