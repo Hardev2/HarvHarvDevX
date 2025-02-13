@@ -2,12 +2,14 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger);
+const totalSlides = document.querySelectorAll('.slide').length;
+const totalWidth = totalSlides * 33.33;
+const scrollLength = totalWidth - 100;
 
 let mm = gsap.matchMedia();
 
-mm.add('(min-width: 1024px)', () => {
-  // Desktop screens
+mm.add('(min-width: 481px)', () => {
+  // Enable animation for screens larger than 480px
   const totalSlides = document.querySelectorAll('.slide').length;
   const totalWidth = totalSlides * 33.33;
   const scrollLength = totalWidth - 100;
@@ -19,46 +21,6 @@ mm.add('(min-width: 1024px)', () => {
       trigger: '.project-slider',
       start: 'top 30%',
       end: '+=2000',
-      pin: true,
-      scrub: 0.8,
-      anticipatePin: 1,
-    },
-  });
-});
-
-mm.add('(max-width: 1023px)', () => {
-  // Tablets
-  const totalSlides = document.querySelectorAll('.slide').length;
-  const totalWidth = totalSlides * 50; // Adjust for smaller screens
-  const scrollLength = totalWidth - 100;
-
-  gsap.to('.slider-wrapper', {
-    x: `-${scrollLength}%`,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.project-slider',
-      start: 'top 40%',
-      end: '+=1500',
-      pin: true,
-      scrub: 0.8,
-      anticipatePin: 1,
-    },
-  });
-});
-
-mm.add('(max-width: 600px)', () => {
-  // Mobile screens
-  const totalSlides = document.querySelectorAll('.slide').length;
-  const totalWidth = totalSlides * 100; // Show fewer slides
-  const scrollLength = totalWidth - 100;
-
-  gsap.to('.slider-wrapper', {
-    x: `-${scrollLength}%`,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.project-slider',
-      start: 'top 50%',
-      end: '+=1000',
       pin: true,
       scrub: 0.8,
       anticipatePin: 1,
